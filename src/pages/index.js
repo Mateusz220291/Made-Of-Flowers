@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import ScrollToTop from "../components/ScrollToTop";
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
-// import Header from "../components/Header";
-// import AboutMe from "../components/AboutMe";
-// import Offer from "../components/Offer";
-// import Gallery from "../components/Gallery";
-// import Footer from "../components/Footer";
+import Header from "../components/Header";
+import InfoSection from "../components/InfoSection";
+import Offer from "../components/Offer";
+import Gallery from "../components/Gallery";
+import { SliderData } from "../data/SliderData";
+import { InfoData } from "../data/InfoData";
+import Footer from "../components/Footer";
 
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,11 +20,11 @@ function Home() {
       <ScrollToTop />
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      {/* <Header />
-      <AboutMe />
+      <Header slides={SliderData} />
+      <InfoSection {...InfoData} />
       <Offer />
       <Gallery />
-      <Footer /> */}
+      <Footer />
     </>
   );
 }
