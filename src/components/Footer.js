@@ -68,7 +68,7 @@ const ContactText = styled.p`
   font-weight: 400;
 `;
 const Form = styled.form`
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: start;

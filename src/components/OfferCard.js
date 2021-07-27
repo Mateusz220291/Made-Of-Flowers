@@ -1,28 +1,29 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-// import Aos from "aos";
-// import "aos/dist/aos.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Card = styled.div`
   max-width: 500px;
-  height: 300px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: pink;
+  color: white;
   padding: 50px 0;
 `;
 const ImgContainer = styled.div`
-  border-radius: 50%;
   width: 200px;
+  height: 200px;
 `;
 
 const CardImg = styled.img`
-  display: flex;
+  object-fit: cover;
   width: 100%;
+  height: 100%;
+  border: 3px solid var(--thirdcolor);
   border-radius: 50%;
-  border: 2px solid pink;
 `;
 const CardTitle = styled.h2`
   padding: 1.2rem 0;
@@ -33,11 +34,11 @@ const CardText = styled.p`
 `;
 
 function OfferCard({ src, title, text }) {
-  //   useEffect(() => {
-  //     Aos.init({ duration: 2000 });
-  //   }, []);
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
-    <Card data-aos="flip-left">
+    <Card data-aos="zoom-in" data-aos-once="true">
       <ImgContainer>
         <CardImg src={src}></CardImg>
       </ImgContainer>

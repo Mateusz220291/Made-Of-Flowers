@@ -11,10 +11,11 @@ import Img1 from "../images/Flowers1.jpg";
 const OfferSection = styled.section`
   display: flex;
   background: var(--maincolor);
-  background: linear-gradient(to right top, var(--dark), var(--maincolor));
+  /* background: linear-gradient(to right top, var(--dark), var(--maincolor)); */
   text-align: center;
   justify-content: center;
   padding: 0 3rem 100px 3rem;
+  color: white;
 `;
 const OfferContainer = styled.div`
   display: flex;
@@ -22,10 +23,8 @@ const OfferContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: pink;
 `;
 const OfferTitle = styled.h2`
-  color: pink;
   font-size: 40px;
   padding: 3rem 0;
 `;
@@ -47,8 +46,10 @@ function Offer() {
   return (
     <OfferSection id="offer">
       <OfferContainer>
-        <OfferTitle data-aos="fade-up">Co oferuje?</OfferTitle>
-        <OfferText data-aos="fade-up">
+        <OfferTitle data-aos="fade-up" data-aos-once="true">
+          Co oferuje?
+        </OfferTitle>
+        <OfferText data-aos="fade-up" data-aos-once="true">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempore
           sequi iure enim eius neque non aperiam consectetur dolor! Debitis
           voluptas voluptate eius quidem odit? Asperiores eligendi aperiam

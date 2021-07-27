@@ -9,6 +9,7 @@ import Gallery from "../components/Gallery";
 import { SliderData } from "../data/SliderData";
 import { InfoData } from "../data/InfoData";
 import Footer from "../components/Footer";
+import GlobalStyle from "../components/GlobalStyles";
 
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +18,7 @@ function Home() {
   };
   return (
     <>
+      <GlobalStyle />
       <ScrollToTop />
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />

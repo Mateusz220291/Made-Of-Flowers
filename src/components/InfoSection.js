@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
-// import { Button } from "./Button";
+import { Button } from "../components/GlobalStyles";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Section = styled.section`
   width: 100%;
   height: 100%;
   padding: 4rem 0rem;
+  padding-bottom: 0;
+  color: var(--secondcolor);
 `;
 const Container = styled.div`
   padding: 3rem calc((100vw - 1300px) / 2);
@@ -50,7 +54,7 @@ const ColumnRight = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
-
+    border: 2px solid var(--thirdcolor);
     @media screen and (max-width: 768px) {
       width: 90%;
       height: 90%;
@@ -66,20 +70,23 @@ const InfoSection = ({
   reverse,
   buttonLabel,
 }) => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
-    <Section>
+    <Section id="aboutMe">
       <Container>
-        <ColumnLeft>
+        <ColumnRight data-aos-once="true" data-aos="fade-right">
+          <img src={image} alt="home" />
+        </ColumnRight>
+        <ColumnLeft data-aos="fade-left" data-aos-once="true">
           <h1>{heading}</h1>
           <p>{paragraphOne}</p>
           <p>{paragraphTwo}</p>
-          {/* <Button to="/homes" primary="true">
+          <Button to="/homes" primary="true">
             {buttonLabel}
-          </Button> */}
+          </Button>
         </ColumnLeft>
-        <ColumnRight reverse={reverse}>
-          <img src={image} alt="home" />
-        </ColumnRight>
       </Container>
     </Section>
   );

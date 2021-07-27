@@ -4,9 +4,10 @@ import { IconContext } from "react-icons/lib";
 import { animateScroll as scroll } from "react-scroll";
 import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const Nav = styled.nav`
-  background: #000;
+  background: var(--maincolor);
   height: 80px;
   display: flex;
   justify-content: center;
@@ -98,11 +99,23 @@ const NavLinks = styled(LinkS)`
   cursor: pointer;
   border-bottom: 4px solid transparent;
   &:hover {
-    color: red;
+    color: var(--secondcolor);
   }
   &.active {
-    border-bottom: 4px solid #e62eb5;
+    border-bottom: 4px solid var(--thirdcolor);
   }
+`;
+
+const Socials = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70px;
+  margin-left: 50px; ;
+`;
+const Social = styled.a`
+  color: #fff;
+  font-size: 24px;
 `;
 
 const Navbar = ({ toggle }) => {
@@ -124,7 +137,7 @@ const Navbar = ({ toggle }) => {
             <NavMenu>
               <NavItem>
                 <NavLinks
-                  to="aboutme"
+                  to="aboutMe"
                   smooth={true}
                   duration={500}
                   spy={true}
@@ -149,7 +162,7 @@ const Navbar = ({ toggle }) => {
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="projects"
+                  to="gallery"
                   smooth={true}
                   duration={500}
                   spy={true}
@@ -171,6 +184,22 @@ const Navbar = ({ toggle }) => {
                   Kontakt
                 </NavLinks>
               </NavItem>
+              <Socials>
+                <Social
+                  href="https://www.facebook.com/Z-kwiat%C3%B3w-uszyte-134634411672850"
+                  target="_blank"
+                  aria-label="Facebook"
+                >
+                  <FaFacebook />
+                </Social>
+                <Social
+                  href="https://www.instagram.com/zkwiatowuszyte/?fbclid=IwAR2etgOeP7mR198DTvux45JoKKoVQlqxUggSJ593z1LyLNbVj5voWr6Xzg8"
+                  target="_blank"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram />
+                </Social>
+              </Socials>
             </NavMenu>
           </NavbarContainer>
         </Nav>

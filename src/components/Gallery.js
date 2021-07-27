@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import img1 from "../images/Flowers1.jpg";
 import img2 from "../images/Flowers2.jpg";
@@ -7,6 +7,8 @@ import img4 from "../images/Flowers4.jpg";
 import img5 from "../images/Flowers5.jpg";
 
 import Masonry from "react-masonry-css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Container = styled.div`
   max-width: 1300px;
@@ -25,9 +27,13 @@ function Gallery() {
     1100: 2,
     700: 1,
   };
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <>
-      <Container>
+      <Container id="gallery">
         <ContainerTitle>Galeria</ContainerTitle>
         <ContainerText>
           Poniżej przedstawiamy kilka wybranych zdjęć z naszych dotychczasowych
@@ -38,19 +44,19 @@ function Gallery() {
           className="my-masonry-grid"
           columnClassName="my-masonry-grid_column"
         >
-          <Gimg src={img1} alt="gallery_photo"></Gimg>
-          <Gimg src={img4} alt="gallery_photo"></Gimg>
-          <Gimg src={img2} alt="gallery_photo"></Gimg>
-          <Gimg src={img3} alt="gallery_photo"></Gimg>
-          <Gimg src={img5} alt="gallery_photo"></Gimg>
-          <Gimg src={img1} alt="gallery_photo"></Gimg>
-          <Gimg src={img2} alt="gallery_photo"></Gimg>
-          <Gimg src={img3} alt="gallery_photo"></Gimg>
-          <Gimg src={img4} alt="gallery_photo"></Gimg>
-          <Gimg src={img5} alt="gallery_photo"></Gimg>
-          <Gimg src={img2} alt="gallery_photo"></Gimg>
-          <Gimg src={img3} alt="gallery_photo"></Gimg>
-          <Gimg src={img1} alt="gallery_photo"></Gimg>
+          <Gimg data-aos="fade-up" src={img1} alt="gallery_photo"></Gimg>
+          <Gimg data-aos="fade-up" src={img4} alt="gallery_photo"></Gimg>
+          <Gimg data-aos="fade-up" src={img2} alt="gallery_photo"></Gimg>
+          <Gimg data-aos="fade-up" src={img3} alt="gallery_photo"></Gimg>
+          <Gimg data-aos="fade-up" src={img5} alt="gallery_photo"></Gimg>
+          <Gimg data-aos="fade-up" src={img1} alt="gallery_photo"></Gimg>
+          <Gimg data-aos="fade-up" src={img2} alt="gallery_photo"></Gimg>
+          <Gimg data-aos="fade-up" src={img3} alt="gallery_photo"></Gimg>
+          <Gimg data-aos="fade-up" src={img4} alt="gallery_photo"></Gimg>
+          <Gimg data-aos="fade-up" src={img5} alt="gallery_photo"></Gimg>
+          <Gimg data-aos="fade-up" src={img2} alt="gallery_photo"></Gimg>
+          <Gimg data-aos="fade-up" src={img3} alt="gallery_photo"></Gimg>
+          <Gimg data-aos="fade-up" src={img1} alt="gallery_photo"></Gimg>
         </Masonry>
       </Container>
     </>
