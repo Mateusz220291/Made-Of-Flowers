@@ -3,6 +3,7 @@ import { Button } from "./GlobalStyles";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 // import myLogo from "../images/Logo.png";
+import DesignerImg from "../images/Designer.png";
 
 import { animateScroll as scroll } from "react-scroll";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
@@ -11,17 +12,17 @@ const FooterSection = styled.section`
   display: flex;
   flex-direction: column;
   background: var(--maincolor);
-  background: linear-gradient(to right top, pink, pink);
   text-align: center;
   justify-content: center;
-  padding: 0 120px;
+  padding: 7rem 120px;
+  color: #fff;
 
   @media screen and (max-width: 820px) {
     padding: 0 0;
   }
 `;
 const InfoWrapper = styled.div``;
-const InfoTitle = styled.h2`
+const InfoTitle = styled.h1`
   color: white;
   font-family: "MonteCarlo", cursive;
   font-size: clamp(1rem, 8vw, 4rem);
@@ -31,8 +32,12 @@ const InfoTitle = styled.h2`
     padding: 1rem 0;
   }
 `;
-const InfoSubtitle = styled.h3`
+const InfoSubtitle = styled.p`
   color: white;
+  line-height: 1.5;
+  padding-bottom: 3rem;
+  text-align: center;
+  font-size: clamp(0.5rem, 4vw, 1.5rem);
 `;
 const ContactContainer = styled.div`
   display: flex;
@@ -59,14 +64,20 @@ const ContactWrapper = styled.div`
     align-items: center;
   }
 `;
-const ContactTitle = styled.h2`
+const ContactTitle = styled.p`
   font-weight: 400;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
 `;
 const ContactSubtitle = styled.p`
   font-weight: 200;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
 `;
 const ContactText = styled.p`
   font-weight: 400;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
 `;
 const Form = styled.form`
   width: 50%;
@@ -86,7 +97,7 @@ const FormLabel = styled.label`
 const FormInput = styled.input`
   width: 100%;
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 10px;
   margin-right: 10px;
   outline: none;
   border: none;
@@ -106,7 +117,7 @@ const FormTextarea = styled.textarea`
   width: 100%;
   height: 200px;
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 10px;
   margin-right: 10px;
   outline: none;
   border: none;
@@ -125,8 +136,13 @@ const FormTextarea = styled.textarea`
 `;
 const FormSubmitButton = styled(Button)`
   ${Button}
+  :hover {
+    border: 2px solid white;
+  }
 `;
-const SocialMedia = styled.div``;
+const SocialMedia = styled.div`
+  padding: 7rem 0 4rem 0;
+`;
 const SocialMediaWrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -140,7 +156,6 @@ const SocialMediaWrapper = styled.div`
   }
 `;
 const Logo = styled(Link)`
-  color: #fff;
   justify-self: start;
   cursor: pointer;
   text-decoration: none;
@@ -148,25 +163,39 @@ const Logo = styled(Link)`
   display: flex;
   align-items: center;
   margin-bottom: 16px;
+  color: #fff;
   img {
     height: 70px;
   }
 `;
 
 const Copyright = styled.div`
-  color: #fff;
   margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 const SocialWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 240px;
 `;
 const Social = styled.a`
-  color: #fff;
   font-size: 24px;
+  margin: 10px;
+  color: #fff;
 `;
+
+const Designer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 100px;
+  }
+`;
+const Privacy = styled.div``;
 function Footer() {
   const toggleHome = () => {
     scroll.scrollToTop();
@@ -216,15 +245,31 @@ function Footer() {
             <Logo to="/" onClick={toggleHome}>
               <img src={"#"} alt="logo"></img>
             </Logo>
-            <Copyright>Z kwiatów uszyte© 2021</Copyright>
+            <Copyright>Z kwiatów uszyte © 2021</Copyright>
             <SocialWrapper>
-              <Social href="#" target="_blank" aria-label="Facebook">
+              <Social
+                href="https://www.facebook.com/Z-kwiat%C3%B3w-uszyte-134634411672850"
+                target="_blank"
+                aria-label="Facebook"
+              >
                 <FaFacebook />
               </Social>
-              <Social href="#" target="_blank" aria-label="Instagram">
+              <Social
+                href="https://www.instagram.com/zkwiatowuszyte/?fbclid=IwAR2etgOeP7mR198DTvux45JoKKoVQlqxUggSJ593z1LyLNbVj5voWr6Xzg8"
+                target="_blank"
+                aria-label="Instagram"
+              >
                 <FaInstagram />
               </Social>
             </SocialWrapper>
+            <Privacy>Polityka prywatności</Privacy>
+            <Designer to="/" onClick={toggleHome}>
+              {" "}
+              <p>Projekt strony:</p>
+              <a href="http://www.softwarematt.pl/" target="_blank">
+                <img src={DesignerImg} alt="SoftwareMatt"></img>
+              </a>
+            </Designer>
           </SocialMediaWrapper>
         </SocialMedia>
       </FooterSection>

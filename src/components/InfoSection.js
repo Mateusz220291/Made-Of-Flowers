@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Button } from "../components/GlobalStyles";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Link as LinkS } from "react-scroll";
 
 const Section = styled.section`
   width: 100%;
@@ -33,11 +34,12 @@ const ColumnLeft = styled.div`
   h1 {
     margin-bottom: 1rem;
     font-family: "MonteCarlo", cursive;
-    font-size: clamp(1.5rem, 6vw, 2rem);
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
   }
 
   p {
     margin-bottom: 2rem;
+    font-size: 1.2rem;
   }
 `;
 const ColumnRight = styled.div`
@@ -62,6 +64,9 @@ const ColumnRight = styled.div`
     }
   }
 `;
+const LinkTo = styled(LinkS)`
+  width: 100%;
+`;
 
 const InfoSection = ({
   heading,
@@ -84,9 +89,17 @@ const InfoSection = ({
           <h1>{heading}</h1>
           <p>{paragraphOne}</p>
           <p>{paragraphTwo}</p>
-          <Button to="/homes" primary="true">
-            {buttonLabel}
-          </Button>
+          <LinkTo
+            to="gallery"
+            primary="true"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+          >
+            <Button>{buttonLabel}</Button>
+          </LinkTo>
         </ColumnLeft>
       </Container>
     </Section>

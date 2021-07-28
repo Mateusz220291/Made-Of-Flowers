@@ -4,6 +4,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const Card = styled.div`
+  min-width: 450px;
   max-width: 500px;
   height: 400px;
   display: flex;
@@ -22,17 +23,18 @@ const CardImg = styled.img`
   object-fit: cover;
   width: 100%;
   height: 100%;
-  border: 3px solid var(--thirdcolor);
+  border: 3px solid white;
   border-radius: 50%;
 `;
-const CardTitle = styled.h2`
+const CardTitle = styled.h3`
   padding: 1.2rem 0;
-  font-size: clamp(1rem, 8vw, 2rem);
+  font-size: clamp(1rem, 8vw, 2.2rem);
   font-family: "MonteCarlo", cursive;
 `;
 const CardText = styled.p`
   line-height: 1.2;
   font-weight: 200;
+  font-size: 1.2rem;
 `;
 
 function OfferCard({ src, title, text }) {

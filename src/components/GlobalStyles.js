@@ -8,9 +8,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Alegreya Sans', sans-serif;
 }
 :root {
-    --maincolor: pink;
+    --maincolor: #faf1d9;
     --secondcolor: #043300;
-    --thirdcolor: #DAA520;
+    --thirdcolor: pink;
+    --fourthcolor: #DAA520;
 }
 `;
 
@@ -31,6 +32,7 @@ export const Button = styled.button`
     background: #fff;
     background: var(--maincolor);
     color: white;
+    border: 2px solid white;
   }
 
   @media screen and (max-width: 960px) {

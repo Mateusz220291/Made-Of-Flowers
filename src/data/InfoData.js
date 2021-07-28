@@ -3,9 +3,9 @@ import ImageOne from "../images/About.jpg";
 export const InfoData = {
   heading: "Z miłości do kwiatów",
   paragraphOne:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda laborum architecto sapiente animi reprehenderit, magnam itaque distinctio enim atque minus quos error mollitia deserunt iusto",
+    "Nasz firma powstała z myślą o parach, które marzą o dekoracjach ślubnych dopracowanych w każdym szczególe. Uwielbiamy tworzyć, eksperymentować i spełniać Wasze marzenia.",
   paragraphTwo:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda laborum architecto sapiente animi reprehenderit",
+    "Dokładamy wszelkich starań aby najważniejszy dzień Waszego życia udekorowany był najpiękniejszymi kwiatami.",
   buttonLabel: "Moje prace",
   image: ImageOne,
   reverse: false,

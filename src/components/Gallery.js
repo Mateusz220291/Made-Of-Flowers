@@ -29,9 +29,9 @@ const ContainerTitle = styled.h1`
   font-size: clamp(1rem, 8vw, 4rem);
   padding: 3rem 0;
 `;
-const ContainerText = styled.h3`
+const ContainerText = styled.p`
   line-height: 1.5;
-  padding: 3rem 0;
+  padding-bottom: 3rem;
   text-align: center;
   font-size: clamp(0.5rem, 4vw, 1.5rem);
 `;

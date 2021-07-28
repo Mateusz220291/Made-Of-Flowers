@@ -5,7 +5,7 @@ import ImageThree from "../images/Flowers3.jpg";
 export const SliderData = [
   {
     id: "1",
-    title: "Bukiety okolicznościowe",
+    title: "Lorem ipsum lorem...",
     // price: "125,000$",
     // path: "/homes",
     label: "O mnie",
@@ -14,7 +14,7 @@ export const SliderData = [
   },
   {
     id: "2",
-    title: "Dekoracja uroczystości ślubnch",
+    title: "Lorem ipsum lorem...",
     // price: "99,000$",
     // path: "/homes",
     label: "Dekoracje ślubne",
@@ -23,7 +23,7 @@ export const SliderData = [
   },
   {
     id: "3",
-    title: "Dekoracja sal weselnych",
+    title: "Lorem ipsum lorem...",
     // price: "113,000$",
     // path: "/homes",
     label: "Kontakt",

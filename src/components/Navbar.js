@@ -102,7 +102,7 @@ const NavLinks = styled(LinkS)`
     color: var(--secondcolor);
   }
   &.active {
-    border-bottom: 4px solid var(--thirdcolor);
+    border-bottom: 4px solid white;
   }
 `;
 
@@ -116,6 +116,10 @@ const Socials = styled.div`
 const Social = styled.a`
   color: #fff;
   font-size: 24px;
+
+  :hover {
+    color: red;
+  }
 `;
 
 const Navbar = ({ toggle }) => {

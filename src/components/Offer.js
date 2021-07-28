@@ -24,7 +24,7 @@ const OfferContainer = styled.div`
   align-items: center;
   justify-content: center;
 `;
-const OfferTitle = styled.h2`
+const OfferTitle = styled.h1`
   font-family: "MonteCarlo", cursive;
   font-size: clamp(1rem, 8vw, 4rem);
   padding: 3rem 0;
@@ -48,7 +48,7 @@ function Offer() {
     <OfferSection id="offer">
       <OfferContainer>
         <OfferTitle data-aos="fade-up" data-aos-once="true">
-          Co oferuje?
+          Co oferujemy?
         </OfferTitle>
         <OfferText data-aos="fade-up" data-aos-once="true">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempore
@@ -59,27 +59,23 @@ function Offer() {
         <OfferWrapper>
           <OfferCard
             src={Img1}
-            title="Lorem..."
-            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempore
-            sequi iure enim eius!"
+            title="Ślub"
+            text="Kompleksowa usługa dekoracji ślubnej sali oraz kościoła."
           />
           <OfferCard
             src={Img1}
-            title="Lorem..."
-            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempore
-            sequi iure enim eius."
+            title="Flower Box"
+            text="Kompozycje ze świeżych kwiatów zamknięte w pudełku."
           />
           <OfferCard
             src={Img1}
-            title="Lorem..."
-            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempore
-            sequi iure enim eius."
+            title="Inne uroczystości"
+            text="Udekorujemy każde przyjęcie, chrzciny, komunie..."
           />
           <OfferCard
             src={Img1}
-            title="Lorem..."
-            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempore
-            sequi iure enim eius."
+            title="Rośliny doniczkowe"
+            text="Stacjonarnie posiadamy szeroki wybór roślin, które upiększą Twój ogród."
           />
         </OfferWrapper>
       </OfferContainer>
