@@ -109,9 +109,9 @@ const HeroContent = styled.div`
   color: #fff;
 
   h1 {
-    font-size: clamp(1rem, 8vw, 2rem);
-    text-transform: uppercase;
-    font-weight: 400;
+    font-family: "MonteCarlo", cursive;
+    font-size: clamp(1rem, 8vw, 6rem);
+    font-weight: 500;
     text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
     text-align: left;
     margin-bottom: 0.8rem;

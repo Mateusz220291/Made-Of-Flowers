@@ -23,7 +23,8 @@ const FooterSection = styled.section`
 const InfoWrapper = styled.div``;
 const InfoTitle = styled.h2`
   color: white;
-  font-size: 40px;
+  font-family: "MonteCarlo", cursive;
+  font-size: clamp(1rem, 8vw, 4rem);
   padding: 3rem 0;
   text-align: center;
   @media screen and (max-width: 820px) {
@@ -58,7 +59,7 @@ const ContactWrapper = styled.div`
     align-items: center;
   }
 `;
-const ContactTitle = styled.h3`
+const ContactTitle = styled.h2`
   font-weight: 400;
 `;
 const ContactSubtitle = styled.p`
@@ -180,12 +181,12 @@ function Footer() {
         <ContactContainer>
           <ContactWrapper>
             <ContactTitle>
-              Skontaktuj się ze mną w dowolnej chwili za pomocą formularza
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </ContactTitle>
             <ContactSubtitle>
-              Lub napisz do mnie bezpośrednio na mój e-mail:
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </ContactSubtitle>
-            <ContactText>zkwiatówuszyte@wp.pl</ContactText>
+            <ContactText>Lorem@ipsum.pl</ContactText>
           </ContactWrapper>
 
           <Form action="https://formspree.io/f/mrgrqpqa" method="POST">

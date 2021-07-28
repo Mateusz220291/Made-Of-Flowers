@@ -25,11 +25,12 @@ const OfferContainer = styled.div`
   justify-content: center;
 `;
 const OfferTitle = styled.h2`
-  font-size: 40px;
+  font-family: "MonteCarlo", cursive;
+  font-size: clamp(1rem, 8vw, 4rem);
   padding: 3rem 0;
 `;
 const OfferText = styled.p`
-  font-size: 17px;
+  font-size: clamp(0.5rem, 4vw, 1.5rem);
   line-height: 1.5;
 `;
 const OfferWrapper = styled.div`

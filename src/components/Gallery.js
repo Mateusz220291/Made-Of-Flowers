@@ -14,12 +14,27 @@ const Container = styled.div`
   max-width: 1300px;
   padding: 30px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondcolor);
 `;
 const Gimg = styled.img`
   width: 100%;
+  border: 2px solid var(--thirdcolor);
 `;
-const ContainerTitle = styled.h1``;
-const ContainerText = styled.h3``;
+const ContainerTitle = styled.h1`
+  font-family: "MonteCarlo", cursive;
+  font-size: clamp(1rem, 8vw, 4rem);
+  padding: 3rem 0;
+`;
+const ContainerText = styled.h3`
+  line-height: 1.5;
+  padding: 3rem 0;
+  text-align: center;
+  font-size: clamp(0.5rem, 4vw, 1.5rem);
+`;
 
 function Gallery() {
   const breakpoints = {
@@ -29,7 +44,7 @@ function Gallery() {
   };
 
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 3000 });
   }, []);
   return (
     <>
@@ -55,8 +70,8 @@ function Gallery() {
           <Gimg data-aos="fade-up" src={img4} alt="gallery_photo"></Gimg>
           <Gimg data-aos="fade-up" src={img5} alt="gallery_photo"></Gimg>
           <Gimg data-aos="fade-up" src={img2} alt="gallery_photo"></Gimg>
-          <Gimg data-aos="fade-up" src={img3} alt="gallery_photo"></Gimg>
-          <Gimg data-aos="fade-up" src={img1} alt="gallery_photo"></Gimg>
+          <Gimg data-aos="fade-up" src={img2} alt="gallery_photo"></Gimg>
+          <Gimg data-aos="fade-up" src={img2} alt="gallery_photo"></Gimg>
         </Masonry>
       </Container>
     </>

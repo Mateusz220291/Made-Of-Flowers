@@ -32,6 +32,7 @@ const ColumnLeft = styled.div`
 
   h1 {
     margin-bottom: 1rem;
+    font-family: "MonteCarlo", cursive;
     font-size: clamp(1.5rem, 6vw, 2rem);
   }
 

@@ -27,6 +27,8 @@ const CardImg = styled.img`
 `;
 const CardTitle = styled.h2`
   padding: 1.2rem 0;
+  font-size: clamp(1rem, 8vw, 2rem);
+  font-family: "MonteCarlo", cursive;
 `;
 const CardText = styled.p`
   line-height: 1.2;

@@ -9,26 +9,28 @@ const GlobalStyle = createGlobalStyle`
 }
 :root {
     --maincolor: pink;
-    --secondcolor: green;
-    --thirdcolor: gold;
+    --secondcolor: #043300;
+    --thirdcolor: #DAA520;
 }
 `;
 
 export const Button = styled.button`
-  border-radius: 4px;
-  background: ${({ primary }) => (primary ? "var(--secondcolor)" : "#0467FB")};
+  border: 2px solid var(--maincolor);
+  text-transform: uppercase;
+  background: white;
   white-space: nowrap;
-  padding: ${({ big }) => (big ? "12px 64px" : "10px 20px")};
-  color: #fff;
-  font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
+  padding: 10px 20px;
+  color: var(--maincolor);
+  font-size: 20px;
   outline: none;
-  border: none;
   cursor: pointer;
+  font-weight: 400;
 
   &:hover {
-    transition: all 0.3s ease-out;
+    transition: all 0.5s ease-out;
     background: #fff;
-    background: ${({ primary }) => (primary ? "var(--thirdcolor)" : "#e62eb5")};
+    background: var(--maincolor);
+    color: white;
   }
 
   @media screen and (max-width: 960px) {

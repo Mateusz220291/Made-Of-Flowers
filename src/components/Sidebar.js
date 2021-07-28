@@ -8,7 +8,7 @@ const SidebarContainer = styled.aside`
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: #0d0d0d;
+  background: white;
   display: grid;
   align-items: center;
   top: 0;
@@ -19,7 +19,7 @@ const SidebarContainer = styled.aside`
 `;
 
 const CloseIcon = styled(FaTimes)`
-  color: #fff;
+  color: var(--maincolor);
 `;
 
 const Icon = styled.div`
@@ -53,7 +53,7 @@ const SidebarLink = styled(LinkS)`
   font-size: 1.5rem;
   text-decoration: none;
   transition: 0.2s ease-in-out;
-  color: #fff;
+  color: var(--maincolor);
   cursor: pointer;
   &:hover {
     color: #0467fb;
@@ -70,7 +70,7 @@ const Sidebar = ({ isOpen, toggle }) => {
       <SidebarWrapper>
         <SidebarMenu>
           <SidebarLink
-            to="aboutme"
+            to="aboutMe"
             onClick={toggle}
             offset={-80}
             smooth={true}
@@ -92,7 +92,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             Oferta
           </SidebarLink>
           <SidebarLink
-            to="projects"
+            to="gallery"
             onClick={toggle}
             offset={-80}
             smooth={true}
@@ -103,7 +103,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             Galeria
           </SidebarLink>
           <SidebarLink
-            to="gallery"
+            to="contact"
             onClick={toggle}
             offset={-80}
             smooth={true}
