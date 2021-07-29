@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 // import myLogo from "../images/Logo.png";
 import DesignerImg from "../images/Designer.png";
-
+import { IconContext } from "react-icons";
 import { animateScroll as scroll } from "react-scroll";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
@@ -15,7 +15,7 @@ const FooterSection = styled.section`
   text-align: center;
   justify-content: center;
   padding: 7rem 120px;
-  color: #fff;
+  color: var(--secondcolor);
 
   @media screen and (max-width: 820px) {
     padding: 0 0;
@@ -23,7 +23,6 @@ const FooterSection = styled.section`
 `;
 const InfoWrapper = styled.div``;
 const InfoTitle = styled.h1`
-  color: white;
   font-family: "MonteCarlo", cursive;
   font-size: clamp(1rem, 8vw, 4rem);
   padding: 3rem 0;
@@ -33,7 +32,6 @@ const InfoTitle = styled.h1`
   }
 `;
 const InfoSubtitle = styled.p`
-  color: white;
   line-height: 1.5;
   padding-bottom: 3rem;
   text-align: center;
@@ -59,7 +57,6 @@ const ContactWrapper = styled.div`
   flex-direction: column;
   /* align-it ems: flex-start; */
   justify-content: space-between;
-  color: white;
   @media screen and (max-width: 820px) {
     align-items: center;
   }
@@ -91,7 +88,7 @@ const Form = styled.form`
   }
 `;
 const FormLabel = styled.label`
-  color: #fff;
+  color: var(--secondcolor);
   padding: 5px 0 0 0;
 `;
 const FormInput = styled.input`
@@ -163,7 +160,7 @@ const Logo = styled(Link)`
   display: flex;
   align-items: center;
   margin-bottom: 16px;
-  color: #fff;
+  color: var(--secondcolor);
   img {
     height: 70px;
   }
@@ -247,20 +244,34 @@ function Footer() {
             </Logo>
             <Copyright>Z kwiatów uszyte © 2021</Copyright>
             <SocialWrapper>
-              <Social
-                href="https://www.facebook.com/Z-kwiat%C3%B3w-uszyte-134634411672850"
-                target="_blank"
-                aria-label="Facebook"
+              <IconContext.Provider
+                value={{
+                  color: "var(--secondcolor)",
+                  className: "global-class-name",
+                }}
               >
-                <FaFacebook />
-              </Social>
-              <Social
-                href="https://www.instagram.com/zkwiatowuszyte/?fbclid=IwAR2etgOeP7mR198DTvux45JoKKoVQlqxUggSJ593z1LyLNbVj5voWr6Xzg8"
-                target="_blank"
-                aria-label="Instagram"
+                <Social
+                  href="https://www.facebook.com/Z-kwiat%C3%B3w-uszyte-134634411672850"
+                  target="_blank"
+                  aria-label="Facebook"
+                >
+                  <FaFacebook />
+                </Social>
+              </IconContext.Provider>
+              <IconContext.Provider
+                value={{
+                  color: "var(--secondcolor)",
+                  className: "global-class-name",
+                }}
               >
-                <FaInstagram />
-              </Social>
+                <Social
+                  href="https://www.instagram.com/zkwiatowuszyte/?fbclid=IwAR2etgOeP7mR198DTvux45JoKKoVQlqxUggSJ593z1LyLNbVj5voWr6Xzg8"
+                  target="_blank"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram />
+                </Social>
+              </IconContext.Provider>
             </SocialWrapper>
             <Privacy>Polityka prywatności</Privacy>
             <Designer to="/" onClick={toggleHome}>

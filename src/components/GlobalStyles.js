@@ -12,16 +12,17 @@ const GlobalStyle = createGlobalStyle`
     --secondcolor: #043300;
     --thirdcolor: pink;
     --fourthcolor: #DAA520;
+    --fifthcolor:#665A3A;
 }
 `;
 
 export const Button = styled.button`
-  border: 2px solid var(--maincolor);
+  border: 2px solid var(--fifthcolor);
   text-transform: uppercase;
   background: white;
   white-space: nowrap;
   padding: 10px 20px;
-  color: var(--maincolor);
+  color: var(--fifthcolor);
   font-size: 20px;
   outline: none;
   cursor: pointer;
@@ -30,7 +31,7 @@ export const Button = styled.button`
   &:hover {
     transition: all 0.5s ease-out;
     background: #fff;
-    background: var(--maincolor);
+    background: var(--fifthcolor);
     color: white;
     border: 2px solid white;
   }

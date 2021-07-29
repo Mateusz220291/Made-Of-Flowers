@@ -1,12 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import img1 from "../images/Flowers1.jpg";
 import img2 from "../images/Flowers2.jpg";
 import img3 from "../images/Flowers3.jpg";
 import img4 from "../images/Flowers4.jpg";
 import img5 from "../images/Flowers5.jpg";
-
+import img6 from "../images/Flowers6.jpg";
+import img7 from "../images/Flowers7.jpg";
+import img8 from "../images/Flowers8.jpg";
+import img9 from "../images/Flowers9.jpg";
+import img10 from "../images/Flowers10.jpg";
+import img11 from "../images/Flowers11.jpg";
+import img12 from "../images/Flowers12.jpg";
 import Masonry from "react-masonry-css";
+import CloseIcon from "@material-ui/icons/Close";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -20,6 +27,15 @@ const Container = styled.div`
   align-items: center;
   color: var(--secondcolor);
 `;
+const ImgWrapper = styled.div`
+  cursor: pointer;
+  transition: all 350ms ease;
+  object-fit: contain;
+  :hover {
+    filter: opacity(0.8);
+  }
+`;
+
 const Gimg = styled.img`
   width: 100%;
   border: 2px solid var(--thirdcolor);
@@ -46,6 +62,27 @@ function Gallery() {
   useEffect(() => {
     Aos.init({ duration: 3000 });
   }, []);
+
+  let data = [
+    { id: 1, imgSrc: img1 },
+    { id: 2, imgSrc: img2 },
+    { id: 3, imgSrc: img3 },
+    { id: 4, imgSrc: img4 },
+    { id: 5, imgSrc: img5 },
+    { id: 6, imgSrc: img6 },
+    { id: 7, imgSrc: img7 },
+    { id: 8, imgSrc: img8 },
+    { id: 9, imgSrc: img9 },
+    { id: 10, imgSrc: img10 },
+    { id: 11, imgSrc: img11 },
+    { id: 12, imgSrc: img12 },
+  ];
+  const [modal, setModal] = useState(false);
+  const [tempImg, setTempImg] = useState("");
+  const getImg = (imgSrc) => {
+    setTempImg(imgSrc);
+    setModal(true);
+  };
   return (
     <>
       <Container id="gallery">
@@ -54,24 +91,27 @@ function Gallery() {
           Poniżej przedstawiamy kilka wybranych zdjęć z naszych dotychczasowych
           realizacji. Zapraszamy po więcej na naszego firmowego instagrama!
         </ContainerText>
+        <div className={modal ? "modal open" : "modal"}>
+          <img src={tempImg} />
+          <CloseIcon onClick={() => setModal(false)} />
+        </div>
         <Masonry
           breakpointCols={breakpoints}
           className="my-masonry-grid"
           columnClassName="my-masonry-grid_column"
         >
-          <Gimg data-aos="fade-up" src={img1} alt="gallery_photo"></Gimg>
-          <Gimg data-aos="fade-up" src={img4} alt="gallery_photo"></Gimg>
-          <Gimg data-aos="fade-up" src={img2} alt="gallery_photo"></Gimg>
-          <Gimg data-aos="fade-up" src={img3} alt="gallery_photo"></Gimg>
-          <Gimg data-aos="fade-up" src={img5} alt="gallery_photo"></Gimg>
-          <Gimg data-aos="fade-up" src={img1} alt="gallery_photo"></Gimg>
-          <Gimg data-aos="fade-up" src={img2} alt="gallery_photo"></Gimg>
-          <Gimg data-aos="fade-up" src={img3} alt="gallery_photo"></Gimg>
-          <Gimg data-aos="fade-up" src={img4} alt="gallery_photo"></Gimg>
-          <Gimg data-aos="fade-up" src={img5} alt="gallery_photo"></Gimg>
-          <Gimg data-aos="fade-up" src={img2} alt="gallery_photo"></Gimg>
-          <Gimg data-aos="fade-up" src={img2} alt="gallery_photo"></Gimg>
-          <Gimg data-aos="fade-up" src={img2} alt="gallery_photo"></Gimg>
+          {data.map((item, index) => {
+            return (
+              <ImgWrapper
+                data-aos="fade-up"
+                data-aos-once="true"
+                key={index}
+                onClick={() => getImg(item.imgSrc)}
+              >
+                <Gimg src={item.imgSrc}></Gimg>
+              </ImgWrapper>
+            );
+          })}
         </Masonry>
       </Container>
     </>

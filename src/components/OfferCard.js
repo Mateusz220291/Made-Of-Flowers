@@ -4,27 +4,32 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const Card = styled.div`
-  min-width: 450px;
   max-width: 500px;
   height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
-  padding: 50px 0;
+  color: var(--secondcolor);
+  padding: 50px;
 `;
 const ImgContainer = styled.div`
   width: 200px;
   height: 200px;
+  border-radius: 50%;
+  border: 2px solid black;
 `;
 
 const CardImg = styled.img`
   object-fit: cover;
   width: 100%;
   height: 100%;
-  border: 3px solid white;
-  border-radius: 50%;
+  padding: 3rem;
+  transition: 0.2s linear;
+  :hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
 `;
 const CardTitle = styled.h3`
   padding: 1.2rem 0;

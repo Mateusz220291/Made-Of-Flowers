@@ -8,6 +8,7 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const Nav = styled.nav`
   background: var(--maincolor);
+  color: var(--secondcolor);
   height: 80px;
   display: flex;
   justify-content: center;
@@ -35,7 +36,7 @@ const NavbarContainer = styled.div`
 `;
 
 const NavLogo = styled(LinkR)`
-  color: #fff;
+  color: var(--secondcolor);
   justify-self: flex-start;
   cursor: pointer;
   display: flex;
@@ -55,6 +56,7 @@ const MobileIcon = styled.div`
   transform: translate(-100%, 60%);
   font-size: 1.8rem;
   cursor: pointer;
+  color: var(--secondcolor);
 
   @media screen and (min-width: 960px) {
     display: none;
@@ -89,7 +91,7 @@ const NavItem = styled.li`
 `;
 
 const NavLinks = styled(LinkS)`
-  color: #fff;
+  color: var(--secondcolor);
   font-weight: 400;
   display: flex;
   align-items: center;
@@ -99,14 +101,15 @@ const NavLinks = styled(LinkS)`
   cursor: pointer;
   border-bottom: 4px solid transparent;
   &:hover {
-    color: var(--secondcolor);
+    color: #aaa;
   }
   &.active {
-    border-bottom: 4px solid white;
+    border-bottom: 4px solid var(--fifthcolor);
   }
 `;
 
 const Socials = styled.div`
+  color: red;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -114,10 +117,9 @@ const Socials = styled.div`
   margin-left: 50px; ;
 `;
 const Social = styled.a`
-  color: #fff;
   font-size: 24px;
 
-  :hover {
+  svg {
     color: red;
   }
 `;
@@ -136,7 +138,14 @@ const Navbar = ({ toggle }) => {
               <img src="" alt="logo"></img>
             </NavLogo>
             <MobileIcon>
-              <FaBars onClick={toggle} />
+              <IconContext.Provider
+                value={{
+                  color: "var(--secondcolor)",
+                  className: "global-class-name",
+                }}
+              >
+                <FaBars onClick={toggle} />
+              </IconContext.Provider>
             </MobileIcon>
             <NavMenu>
               <NavItem>
@@ -189,20 +198,34 @@ const Navbar = ({ toggle }) => {
                 </NavLinks>
               </NavItem>
               <Socials>
-                <Social
-                  href="https://www.facebook.com/Z-kwiat%C3%B3w-uszyte-134634411672850"
-                  target="_blank"
-                  aria-label="Facebook"
+                <IconContext.Provider
+                  value={{
+                    color: "var(--secondcolor)",
+                    className: "global-class-name",
+                  }}
                 >
-                  <FaFacebook />
-                </Social>
-                <Social
-                  href="https://www.instagram.com/zkwiatowuszyte/?fbclid=IwAR2etgOeP7mR198DTvux45JoKKoVQlqxUggSJ593z1LyLNbVj5voWr6Xzg8"
-                  target="_blank"
-                  aria-label="Instagram"
+                  <Social
+                    href="https://www.facebook.com/Z-kwiat%C3%B3w-uszyte-134634411672850"
+                    target="_blank"
+                    aria-label="Facebook"
+                  >
+                    <FaFacebook />
+                  </Social>
+                </IconContext.Provider>
+                <IconContext.Provider
+                  value={{
+                    color: "var(--secondcolor)",
+                    className: "global-class-name",
+                  }}
                 >
-                  <FaInstagram />
-                </Social>
+                  <Social
+                    href="https://www.instagram.com/zkwiatowuszyte/?fbclid=IwAR2etgOeP7mR198DTvux45JoKKoVQlqxUggSJ593z1LyLNbVj5voWr6Xzg8"
+                    target="_blank"
+                    aria-label="Instagram"
+                  >
+                    <FaInstagram />
+                  </Social>{" "}
+                </IconContext.Provider>
               </Socials>
             </NavMenu>
           </NavbarContainer>

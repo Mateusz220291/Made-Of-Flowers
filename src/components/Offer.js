@@ -3,10 +3,10 @@ import styled from "styled-components";
 import OfferCard from "./OfferCard";
 // import Aos from "aos";
 // import "aos/dist/aos.css";
-import Img1 from "../images/Flowers1.jpg";
-// import Img2 from "../images/Responsive.svg";
-// import Img3 from "../images/Functionality.svg";
-// import Img4 from "../images/SEO.svg";
+import Img1 from "../images/wedding1.png";
+import Img2 from "../images/box1.png";
+import Img3 from "../images/bouquet1.png";
+import Img4 from "../images/flower1.png";
 
 const OfferSection = styled.section`
   display: flex;
@@ -15,7 +15,7 @@ const OfferSection = styled.section`
   text-align: center;
   justify-content: center;
   padding: 0 3rem 100px 3rem;
-  color: white;
+  color: var(--secondcolor);
 `;
 const OfferContainer = styled.div`
   display: flex;
@@ -63,17 +63,17 @@ function Offer() {
             text="Kompleksowa usługa dekoracji ślubnej sali oraz kościoła."
           />
           <OfferCard
-            src={Img1}
+            src={Img2}
             title="Flower Box"
             text="Kompozycje ze świeżych kwiatów zamknięte w pudełku."
           />
           <OfferCard
-            src={Img1}
+            src={Img3}
             title="Inne uroczystości"
             text="Udekorujemy każde przyjęcie, chrzciny, komunie..."
           />
           <OfferCard
-            src={Img1}
+            src={Img4}
             title="Rośliny doniczkowe"
             text="Stacjonarnie posiadamy szeroki wybór roślin, które upiększą Twój ogród."
           />

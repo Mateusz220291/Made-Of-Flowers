@@ -19,7 +19,7 @@ const SidebarContainer = styled.aside`
 `;
 
 const CloseIcon = styled(FaTimes)`
-  color: var(--maincolor);
+  color: var(--secondcolor);
 `;
 
 const Icon = styled.div`
@@ -53,7 +53,7 @@ const SidebarLink = styled(LinkS)`
   font-size: 1.5rem;
   text-decoration: none;
   transition: 0.2s ease-in-out;
-  color: var(--maincolor);
+  color: var(--secondcolor);
   cursor: pointer;
   &:hover {
     color: #0467fb;
