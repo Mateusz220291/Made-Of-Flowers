@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Flowers/static/css/main.4c19adfe.chunk.css",
-    "main.js": "/Flowers/static/js/main.82605609.chunk.js",
-    "main.js.map": "/Flowers/static/js/main.82605609.chunk.js.map",
+    "main.css": "/Flowers/static/css/main.57fe2f20.chunk.css",
+    "main.js": "/Flowers/static/js/main.f7ebb3b7.chunk.js",
+    "main.js.map": "/Flowers/static/js/main.f7ebb3b7.chunk.js.map",
     "runtime-main.js": "/Flowers/static/js/runtime-main.0e9338b7.js",
     "runtime-main.js.map": "/Flowers/static/js/runtime-main.0e9338b7.js.map",
     "static/css/2.7fc9bc2b.chunk.css": "/Flowers/static/css/2.7fc9bc2b.chunk.css",
-    "static/js/2.4262fed8.chunk.js": "/Flowers/static/js/2.4262fed8.chunk.js",
-    "static/js/2.4262fed8.chunk.js.map": "/Flowers/static/js/2.4262fed8.chunk.js.map",
+    "static/js/2.c328c0d2.chunk.js": "/Flowers/static/js/2.c328c0d2.chunk.js",
+    "static/js/2.c328c0d2.chunk.js.map": "/Flowers/static/js/2.c328c0d2.chunk.js.map",
     "index.html": "/Flowers/index.html",
     "static/css/2.7fc9bc2b.chunk.css.map": "/Flowers/static/css/2.7fc9bc2b.chunk.css.map",
-    "static/css/main.4c19adfe.chunk.css.map": "/Flowers/static/css/main.4c19adfe.chunk.css.map",
-    "static/js/2.4262fed8.chunk.js.LICENSE.txt": "/Flowers/static/js/2.4262fed8.chunk.js.LICENSE.txt",
+    "static/css/main.57fe2f20.chunk.css.map": "/Flowers/static/css/main.57fe2f20.chunk.css.map",
+    "static/js/2.c328c0d2.chunk.js.LICENSE.txt": "/Flowers/static/js/2.c328c0d2.chunk.js.LICENSE.txt",
     "static/media/About.c4e885bb.jpg": "/Flowers/static/media/About.c4e885bb.jpg",
-    "static/media/Designer.b018e5f9.png": "/Flowers/static/media/Designer.b018e5f9.png",
+    "static/media/Designer.d0f43749.png": "/Flowers/static/media/Designer.d0f43749.png",
     "static/media/Flowers1.f7683253.jpg": "/Flowers/static/media/Flowers1.f7683253.jpg",
     "static/media/Flowers10.a5261f65.jpg": "/Flowers/static/media/Flowers10.a5261f65.jpg",
     "static/media/Flowers11.a2362b84.jpg": "/Flowers/static/media/Flowers11.a2362b84.jpg",
@@ -28,14 +28,15 @@
     "static/media/Flowers9.9021ff51.jpg": "/Flowers/static/media/Flowers9.9021ff51.jpg",
     "static/media/bouquet1.03944ca0.png": "/Flowers/static/media/bouquet1.03944ca0.png",
     "static/media/box1.e1a6f2df.png": "/Flowers/static/media/box1.e1a6f2df.png",
+    "static/media/circleLogo.e7dc4366.png": "/Flowers/static/media/circleLogo.e7dc4366.png",
     "static/media/flower1.48fa8079.png": "/Flowers/static/media/flower1.48fa8079.png",
     "static/media/wedding1.9dfd1b7f.png": "/Flowers/static/media/wedding1.9dfd1b7f.png"
   },
   "entrypoints": [
     "static/js/runtime-main.0e9338b7.js",
     "static/css/2.7fc9bc2b.chunk.css",
-    "static/js/2.4262fed8.chunk.js",
-    "static/css/main.4c19adfe.chunk.css",
-    "static/js/main.82605609.chunk.js"
+    "static/js/2.c328c0d2.chunk.js",
+    "static/css/main.57fe2f20.chunk.css",
+    "static/js/main.f7ebb3b7.chunk.js"
   ]
 }
