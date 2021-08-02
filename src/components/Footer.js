@@ -7,6 +7,7 @@ import DesignerImg from "../images/Designer.png";
 import { IconContext } from "react-icons";
 import { animateScroll as scroll } from "react-scroll";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
+import MyLogo from "../images/circleLogo.png";
 
 const FooterSection = styled.section`
   display: flex;
@@ -14,7 +15,7 @@ const FooterSection = styled.section`
   background: var(--maincolor);
   text-align: center;
   justify-content: center;
-  padding: 7rem 120px;
+  padding: 7rem 120px 0 120px;
   color: var(--secondcolor);
 
   @media screen and (max-width: 820px) {
@@ -24,7 +25,7 @@ const FooterSection = styled.section`
 const InfoWrapper = styled.div``;
 const InfoTitle = styled.h1`
   font-family: "MonteCarlo", cursive;
-  font-size: clamp(1rem, 8vw, 4rem);
+  font-size: clamp(2.5rem, 8vw, 4rem);
   padding: 3rem 0;
   text-align: center;
   @media screen and (max-width: 820px) {
@@ -33,9 +34,9 @@ const InfoTitle = styled.h1`
 `;
 const InfoSubtitle = styled.p`
   line-height: 1.5;
-  padding-bottom: 3rem;
+  padding-bottom: 0.5rem;
   text-align: center;
-  font-size: clamp(0.5rem, 4vw, 1.5rem);
+  font-size: clamp(0.5rem, 5vw, 1.5rem);
 `;
 const ContactContainer = styled.div`
   display: flex;
@@ -59,22 +60,26 @@ const ContactWrapper = styled.div`
   justify-content: space-between;
   @media screen and (max-width: 820px) {
     align-items: center;
+    padding: 0 30px;
   }
 `;
 const ContactTitle = styled.p`
   font-weight: 400;
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
 `;
 const ContactSubtitle = styled.p`
-  font-weight: 200;
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 2rem;
+  font-size: 1rem;
+  @media screen and (max-width: 820px) {
+    margin: 0 0 0.5rem 0;
+  }
 `;
 const ContactText = styled.p`
-  font-weight: 400;
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
 `;
 const Form = styled.form`
   width: 50%;
@@ -138,7 +143,10 @@ const FormSubmitButton = styled(Button)`
   }
 `;
 const SocialMedia = styled.div`
-  padding: 7rem 0 4rem 0;
+  padding: 13rem 0 2rem 0;
+  @media screen and (max-width: 820px) {
+    padding: 0.5rem 0 4rem 0;
+  }
 `;
 const SocialMediaWrapper = styled.div`
   display: flex;
@@ -146,7 +154,7 @@ const SocialMediaWrapper = styled.div`
   align-items: center;
   width: 90%;
   max-width: 1000px;
-  margin: 40px auto 0 auto;
+  margin: 3rem auto 0 auto;
 
   @media screen and (max-width: 820px) {
     flex-direction: column;
@@ -162,12 +170,11 @@ const Logo = styled(Link)`
   margin-bottom: 16px;
   color: var(--secondcolor);
   img {
-    height: 70px;
+    height: 90px;
   }
 `;
 
 const Copyright = styled.div`
-  margin-bottom: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,7 +186,7 @@ const SocialWrapper = styled.div`
   width: 240px;
 `;
 const Social = styled.a`
-  font-size: 24px;
+  font-size: 34px;
   margin: 10px;
   color: #fff;
 `;
@@ -192,7 +199,10 @@ const Designer = styled.div`
     width: 100px;
   }
 `;
-const Privacy = styled.div``;
+const Privacy = styled(Link)`
+  text-decoration: none;
+  color: var(--secondcolor);
+`;
 function Footer() {
   const toggleHome = () => {
     scroll.scrollToTop();
@@ -207,12 +217,15 @@ function Footer() {
         <ContactContainer>
           <ContactWrapper>
             <ContactTitle>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Jeżeli jesteś zainteresowana/ny współpracą zapraszamy do
+              skorzystania z formularza kontaktowego.
             </ContactTitle>
             <ContactSubtitle>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Kontaktować można się również bezpośrednio na adres e-mail badź
+              telefon:
             </ContactSubtitle>
-            <ContactText>Lorem@ipsum.pl</ContactText>
+            <ContactText>zkwiatowuszyte@gmail.com</ContactText>
+            <ContactText>48 508 278 306</ContactText>
           </ContactWrapper>
 
           <Form action="https://formspree.io/f/mrgrqpqa" method="POST">
@@ -240,7 +253,7 @@ function Footer() {
         <SocialMedia>
           <SocialMediaWrapper>
             <Logo to="/" onClick={toggleHome}>
-              <img src={"#"} alt="logo"></img>
+              <img src={MyLogo} alt="logo"></img>
             </Logo>
             <Copyright>Z kwiatów uszyte © 2021</Copyright>
             <SocialWrapper>
@@ -273,10 +286,10 @@ function Footer() {
                 </Social>
               </IconContext.Provider>
             </SocialWrapper>
-            <Privacy>Polityka prywatności</Privacy>
+            <Privacy to="/privacy">Polityka prywatności</Privacy>
             <Designer to="/" onClick={toggleHome}>
               {" "}
-              <p>Projekt strony:</p>
+              <p>Projekt strony: </p>
               <a href="http://www.softwarematt.pl/" target="_blank">
                 <img src={DesignerImg} alt="SoftwareMatt"></img>
               </a>

@@ -7,7 +7,6 @@ import InfoSection from "../components/InfoSection";
 import Offer from "../components/Offer";
 import Gallery from "../components/Gallery";
 import { SliderData } from "../data/SliderData";
-import { InfoData } from "../data/InfoData";
 import Footer from "../components/Footer";
 import GlobalStyle from "../components/GlobalStyles";
 
@@ -23,7 +22,7 @@ function Home() {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <Header slides={SliderData} />
-      <InfoSection {...InfoData} />
+      <InfoSection />
       <Offer />
       <Gallery />
       <Footer />

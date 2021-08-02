@@ -4,6 +4,7 @@ import { Button } from "../components/GlobalStyles";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Link as LinkS } from "react-scroll";
+import ImageOne from "../images/About.jpg";
 
 const Section = styled.section`
   width: 100%;
@@ -34,7 +35,7 @@ const ColumnLeft = styled.div`
   h1 {
     margin-bottom: 1rem;
     font-family: "MonteCarlo", cursive;
-    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    font-size: clamp(2rem, 6vw, 2.5rem);
   }
 
   p {
@@ -54,13 +55,13 @@ const ColumnRight = styled.div`
   }
 
   img {
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: 70%;
     object-fit: cover;
     border: 2px solid var(--thirdcolor);
     @media screen and (max-width: 768px) {
-      width: 90%;
-      height: 90%;
+      width: 100%;
+      height: 80%;
     }
   }
 `;
@@ -68,14 +69,7 @@ const LinkTo = styled(LinkS)`
   width: 100%;
 `;
 
-const InfoSection = ({
-  heading,
-  paragraphOne,
-  paragraphTwo,
-  image,
-  reverse,
-  buttonLabel,
-}) => {
+const InfoSection = () => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
@@ -83,12 +77,19 @@ const InfoSection = ({
     <Section id="aboutMe">
       <Container>
         <ColumnRight data-aos-once="true" data-aos="fade-right">
-          <img src={image} alt="home" />
+          <img src={ImageOne} alt="home" />
         </ColumnRight>
         <ColumnLeft data-aos="fade-left" data-aos-once="true">
-          <h1>{heading}</h1>
-          <p>{paragraphOne}</p>
-          <p>{paragraphTwo}</p>
+          <h1>Z miłości do kwiatów</h1>
+          <p>
+            Nasz firma powstała z myślą o parach, które marzą o dekoracjach
+            ślubnych dopracowanych w każdym szczególe. Uwielbiamy tworzyć,
+            eksperymentować <br></br> i spełniać Wasze marzenia.
+          </p>
+          <p>
+            Dokładamy wszelkich starań aby najważniejszy dzień Waszego życia
+            udekorowany był najpiękniejszymi kwiatami.
+          </p>
           <LinkTo
             to="gallery"
             primary="true"
@@ -98,7 +99,7 @@ const InfoSection = ({
             exact="true"
             offset={-80}
           >
-            <Button>{buttonLabel}</Button>
+            <Button>Moje prace</Button>
           </LinkTo>
         </ColumnLeft>
       </Container>

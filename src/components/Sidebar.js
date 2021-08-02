@@ -2,13 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
 import { Link as LinkS } from "react-scroll";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { IconContext } from "react-icons";
 
 const SidebarContainer = styled.aside`
   position: fixed;
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: white;
+  background: var(--maincolor);
   display: grid;
   align-items: center;
   top: 0;
@@ -59,6 +61,14 @@ const SidebarLink = styled(LinkS)`
     color: #0467fb;
     transition: 0.2s ease-in-out;
   }
+`;
+const SidebarSocials = styled.div`
+  margin-top: 30px;
+`;
+const Social = styled.a`
+  font-size: 34px;
+  margin: 10px;
+  color: #fff;
 `;
 
 const Sidebar = ({ isOpen, toggle }) => {
@@ -113,6 +123,36 @@ const Sidebar = ({ isOpen, toggle }) => {
           >
             Kontakt
           </SidebarLink>
+          <SidebarSocials>
+            <IconContext.Provider
+              value={{
+                color: "var(--secondcolor)",
+                className: "global-class-name",
+              }}
+            >
+              <Social
+                href="https://www.facebook.com/Z-kwiat%C3%B3w-uszyte-134634411672850"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <FaFacebook />
+              </Social>
+            </IconContext.Provider>
+            <IconContext.Provider
+              value={{
+                color: "var(--secondcolor)",
+                className: "global-class-name",
+              }}
+            >
+              <Social
+                href="https://www.instagram.com/zkwiatowuszyte/?fbclid=IwAR2etgOeP7mR198DTvux45JoKKoVQlqxUggSJ593z1LyLNbVj5voWr6Xzg8"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <FaInstagram />
+              </Social>
+            </IconContext.Provider>
+          </SidebarSocials>
         </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>

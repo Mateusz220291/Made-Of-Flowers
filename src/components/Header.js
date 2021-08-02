@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components/macro";
-import { CSSTransition } from "react-transition-group";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import Aos from "aos";
+import "aos/dist/aos.css";
 // import { Button } from "./Button";
 // import {IoMdArrowRoundForward} from 'react-icons/io';
 // import { IoArrowForward, IoArrowBack } from 'react-icons/io5';
@@ -42,7 +44,7 @@ import { CSSTransition } from "react-transition-group";
 
 const HeroSection = styled.section`
   height: 100vh;
-  max-height: 1100px;
+  max-height: 1200px;
   position: relative;
   overflow: hidden;
 `;
@@ -55,6 +57,63 @@ const HeroWrapper = styled.div`
   align-items: center;
   overflow: hidden;
   position: relative;
+  /* .fade-appear {
+    opacity: 0;
+    z-index: 1;
+  }
+  .fade-appear.fade-appear-active {
+    opacity: 1;
+    transition: opacity 1000ms linear;
+  } */
+
+  /* enter */
+  /* .fade-enter {
+    opacity: 0;
+    z-index: 1;
+  }
+  .fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 5000ms linear 5000ms;
+  } */
+
+  /* exit */
+  /* .fade-exit {
+    opacity: 1;
+  }
+  .fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 5000ms linear;
+  }
+  .fade-exit-done {
+    opacity: 0;
+  } */
+
+  /* slide enter */
+  /* .slide-enter {
+    opacity: 0;
+    transform: scale(0.97) translateY(5px);
+    z-index: 1;
+  }
+  .slide-enter.slide-enter-active {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    transition: opacity 3000ms linear 1000ms,
+      transform 3000ms ease-in-out 1000ms;
+  } */
+
+  /* slide exit */
+  /* .slide-exit {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  .slide-exit.slide-exit-active {
+    opacity: 0;
+    transform: scale(0.97) translateY(5px);
+    transition: opacity 1500ms linear, transform 1500ms ease-out;
+  }
+  .slide-exit-done {
+    opacity: 0;
+  } */
 `;
 
 const HeroSlide = styled.div`
@@ -110,16 +169,11 @@ const HeroContent = styled.div`
 
   h1 {
     font-family: "MonteCarlo", cursive;
-    font-size: clamp(1rem, 8vw, 6rem);
+    font-size: clamp(3rem, 8vw, 6rem);
     font-weight: 500;
     text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
-    text-align: left;
+    text-align: center;
     margin-bottom: 0.8rem;
-  }
-
-  p {
-    margin-bottom: 1.2rem;
-    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
   }
 `;
 // const Arrow = styled(IoMdArrowRoundForward)`
@@ -132,24 +186,20 @@ const Header = ({ slides }) => {
   const timeout = useRef(null);
 
   useEffect(() => {
+    Aos.init({ duration: 200000 });
+  }, []);
+
+  useEffect(() => {
     const nextSlide = () => {
       setCurrent((current) => (current === length - 1 ? 0 : current + 1));
     };
-    timeout.current = setTimeout(nextSlide, 6000);
+    timeout.current = setTimeout(nextSlide, 7000);
     return function () {
       if (timeout.current) {
         clearTimeout(timeout.current);
       }
     };
   });
-  // const nextSlide = () =>{
-  //     setCurrent(current === length -1 ? 0 : current + 1)
-  // };
-
-  // const prevSlide = () => {
-  //     setCurrent(current === 0 ? length - 1: current - 1)
-  // };
-
   if (!Array.isArray(slides) || slides.length <= 0) {
     return null;
   }
@@ -158,25 +208,26 @@ const Header = ({ slides }) => {
       <HeroWrapper>
         {slides.map((slide, index) => {
           return (
-            <HeroSlide key={index}>
+            <HeroSlide>
               {index === current && (
-                <HeroSlider>
-                  <HeroImage src={slide.image} alt={slide.alt} />
-                  <HeroContent>
-                    <h1> {slide.title}</h1>
-                    <p>{slide.price}</p>
-                    {/* <Button
-                      to={slide.path}
-                      primary="true"
-                      css={`
-                        max-width: 160px;
-                      `}
-                    >
-                      {slide.label} */}
-                    {/* <Arrow/> */}
-                    {/* </Button> */}
-                  </HeroContent>
-                </HeroSlider>
+                <TransitionGroup>
+                  <CSSTransition
+                    in={current + 1}
+                    appear={true}
+                    timeout={2000}
+                    classNames="fade"
+                  >
+                    <HeroSlider>
+                      <HeroImage src={slide.image} alt={slide.alt} />
+                      <HeroContent>
+                        <h1 data-aos-once="true" data-aos="fade-right">
+                          {" "}
+                          {slide.title}
+                        </h1>
+                      </HeroContent>
+                    </HeroSlider>
+                  </CSSTransition>
+                </TransitionGroup>
               )}
             </HeroSlide>
           );

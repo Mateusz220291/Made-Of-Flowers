@@ -26,7 +26,7 @@ const OfferContainer = styled.div`
 `;
 const OfferTitle = styled.h1`
   font-family: "MonteCarlo", cursive;
-  font-size: clamp(1rem, 8vw, 4rem);
+  font-size: clamp(2.5rem, 8vw, 4rem);
   padding: 3rem 0;
 `;
 const OfferText = styled.p`

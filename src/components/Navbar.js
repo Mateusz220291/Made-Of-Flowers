@@ -5,6 +5,7 @@ import { animateScroll as scroll } from "react-scroll";
 import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
+import MyLogo from "../images/circleLogo.png";
 
 const Nav = styled.nav`
   background: var(--maincolor);
@@ -33,9 +34,13 @@ const NavbarContainer = styled.div`
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 70px;
+  @media screen and (max-width: 500px) {
+    padding: 0 20px;
+  }
 `;
 
 const NavLogo = styled(LinkR)`
+  font-family: "MonteCarlo", cursive;
   color: var(--secondcolor);
   justify-self: flex-start;
   cursor: pointer;
@@ -45,6 +50,9 @@ const NavLogo = styled(LinkR)`
   align-items: center;
   img {
     height: 55px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 1.4rem;
   }
 `;
 
@@ -135,7 +143,7 @@ const Navbar = ({ toggle }) => {
         <Nav>
           <NavbarContainer>
             <NavLogo to="/" onClick={toggleHome}>
-              <img src="" alt="logo"></img>
+              <img src={MyLogo} alt="logo"></img>Z kwiatów uszyte
             </NavLogo>
             <MobileIcon>
               <IconContext.Provider

@@ -4,14 +4,18 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const Card = styled.div`
-  max-width: 500px;
+  width: 500px;
   height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: var(--secondcolor);
-  padding: 50px;
+  padding: 40px;
+  @media screen and (max-width: 820px) {
+    max-width: 280px;
+    padding: 60 0px;
+  }
 `;
 const ImgContainer = styled.div`
   width: 200px;
@@ -32,7 +36,7 @@ const CardImg = styled.img`
   }
 `;
 const CardTitle = styled.h3`
-  padding: 1.2rem 0;
+  padding: 0.5rem 0;
   font-size: clamp(1rem, 8vw, 2.2rem);
   font-family: "MonteCarlo", cursive;
 `;
