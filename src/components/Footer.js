@@ -2,7 +2,6 @@ import React from "react";
 import { Button } from "./GlobalStyles";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-// import myLogo from "../images/Logo.png";
 import DesignerImg from "../images/Designer.png";
 import { IconContext } from "react-icons";
 import { animateScroll as scroll } from "react-scroll";
@@ -15,7 +14,7 @@ const FooterSection = styled.section`
   background: var(--maincolor);
   text-align: center;
   justify-content: center;
-  padding: 7rem 120px 0 120px;
+  padding: 13rem 120px 0 120px;
   color: var(--secondcolor);
 
   @media screen and (max-width: 820px) {
@@ -56,7 +55,6 @@ const ContactWrapper = styled.div`
   height: 200px;
   display: flex;
   flex-direction: column;
-  /* align-it ems: flex-start; */
   justify-content: space-between;
   @media screen and (max-width: 820px) {
     align-items: center;
@@ -225,7 +223,7 @@ function Footer() {
               telefon:
             </ContactSubtitle>
             <ContactText>zkwiatowuszyte@gmail.com</ContactText>
-            <ContactText>48 508 278 306</ContactText>
+            <ContactText>+48 508 278 306</ContactText>
           </ContactWrapper>
 
           <Form action="https://formspree.io/f/mrgrqpqa" method="POST">

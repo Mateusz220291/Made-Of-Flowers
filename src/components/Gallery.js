@@ -64,23 +64,24 @@ function Gallery() {
   }, []);
 
   let data = [
-    { id: 1, imgSrc: img1 },
-    { id: 2, imgSrc: img2 },
-    { id: 3, imgSrc: img3 },
-    { id: 4, imgSrc: img4 },
-    { id: 5, imgSrc: img5 },
-    { id: 6, imgSrc: img6 },
-    { id: 7, imgSrc: img7 },
-    { id: 8, imgSrc: img8 },
-    { id: 9, imgSrc: img9 },
-    { id: 10, imgSrc: img10 },
-    { id: 11, imgSrc: img11 },
-    { id: 12, imgSrc: img12 },
+    { id: 1, imgSrc: img1, alt: "obrazek" },
+    { id: 2, imgSrc: img2, alt: "obrazek" },
+    { id: 3, imgSrc: img3, alt: "obrazek" },
+    { id: 4, imgSrc: img4, alt: "obrazek" },
+    { id: 5, imgSrc: img5, alt: "obrazek" },
+    { id: 6, imgSrc: img6, alt: "obrazek" },
+    { id: 7, imgSrc: img7, alt: "obrazek" },
+    { id: 8, imgSrc: img8, alt: "obrazek" },
+    { id: 9, imgSrc: img9, alt: "obrazek" },
+    { id: 10, imgSrc: img10, alt: "obrazek" },
+    { id: 11, imgSrc: img11, alt: "obrazek" },
+    { id: 12, imgSrc: img12, alt: "obrazek" },
   ];
   const [modal, setModal] = useState(false);
   const [tempImg, setTempImg] = useState("");
   const getImg = (imgSrc) => {
     setTempImg(imgSrc);
+
     setModal(true);
   };
   return (
@@ -92,7 +93,7 @@ function Gallery() {
           realizacji. Zapraszamy po więcej na naszego firmowego instagrama!
         </ContainerText>
         <div className={modal ? "modal open" : "modal"}>
-          <img src={tempImg} />
+          <img src={tempImg} alt={data.alt} />
           <CloseIcon onClick={() => setModal(false)} />
         </div>
         <Masonry

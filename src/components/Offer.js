@@ -1,8 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import OfferCard from "./OfferCard";
-// import Aos from "aos";
-// import "aos/dist/aos.css";
 import Img1 from "../images/wedding1.png";
 import Img2 from "../images/box1.png";
 import Img3 from "../images/bouquet1.png";
@@ -11,7 +9,6 @@ import Img4 from "../images/flower1.png";
 const OfferSection = styled.section`
   display: flex;
   background: var(--maincolor);
-  /* background: linear-gradient(to right top, var(--dark), var(--maincolor)); */
   text-align: center;
   justify-content: center;
   padding: 0 3rem 100px 3rem;
@@ -41,9 +38,6 @@ const OfferWrapper = styled.div`
 `;
 
 function Offer() {
-  //   useEffect(() => {
-  //     Aos.init({ duration: 2000 });
-  //   }, []);
   return (
     <OfferSection id="offer">
       <OfferContainer>

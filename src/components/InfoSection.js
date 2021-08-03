@@ -59,6 +59,9 @@ const ColumnRight = styled.div`
     height: 70%;
     object-fit: cover;
     border: 2px solid var(--thirdcolor);
+    :hover {
+      cursor: pointer;
+    }
     @media screen and (max-width: 768px) {
       width: 100%;
       height: 80%;
@@ -79,7 +82,7 @@ const InfoSection = () => {
         <ColumnRight data-aos-once="true" data-aos="fade-right">
           <img src={ImageOne} alt="home" />
         </ColumnRight>
-        <ColumnLeft data-aos="fade-left" data-aos-once="true">
+        <ColumnLeft data-aos="fade-up" data-aos-once="true">
           <h1>Z miłości do kwiatów</h1>
           <p>
             Nasz firma powstała z myślą o parach, które marzą o dekoracjach

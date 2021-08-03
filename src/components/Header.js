@@ -3,44 +3,6 @@ import styled from "styled-components/macro";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Aos from "aos";
 import "aos/dist/aos.css";
-// import { Button } from "./Button";
-// import {IoMdArrowRoundForward} from 'react-icons/io';
-// import { IoArrowForward, IoArrowBack } from 'react-icons/io5';
-// import { SliderData } from "../data/SliderData";
-
-// const SliderButtons = styled.div`
-//     position: absolute;
-//     bottom: 50px;
-//     right: 50px;
-//     display: flex;
-//     z-index: 10;
-// `;
-
-// const arrowButtons = css`
-//     width: 50px;
-//     height: 50px;
-//     color: #fff;
-//     cursor: pointer;
-//     background:#000d1a;
-//     border-radius: 50px;
-//     padding: 18px;
-//     margin-right: 1rem;
-//     user-select: none;
-//     transition: 0.3;
-
-//     &:hover{
-//       background: #cd853f;
-//       transform: scale(1.05);
-//     }
-// `;
-
-// const PrevArrow = styled(IoArrowBack)`
-//     ${arrowButtons}
-// ;`
-
-// const NextArrow = styled(IoArrowForward)`
-//     ${arrowButtons}
-// ;`
 
 const HeroSection = styled.section`
   height: 100vh;
@@ -57,63 +19,6 @@ const HeroWrapper = styled.div`
   align-items: center;
   overflow: hidden;
   position: relative;
-  /* .fade-appear {
-    opacity: 0;
-    z-index: 1;
-  }
-  .fade-appear.fade-appear-active {
-    opacity: 1;
-    transition: opacity 1000ms linear;
-  } */
-
-  /* enter */
-  /* .fade-enter {
-    opacity: 0;
-    z-index: 1;
-  }
-  .fade-enter.fade-enter-active {
-    opacity: 1;
-    transition: opacity 5000ms linear 5000ms;
-  } */
-
-  /* exit */
-  /* .fade-exit {
-    opacity: 1;
-  }
-  .fade-exit.fade-exit-active {
-    opacity: 0;
-    transition: opacity 5000ms linear;
-  }
-  .fade-exit-done {
-    opacity: 0;
-  } */
-
-  /* slide enter */
-  /* .slide-enter {
-    opacity: 0;
-    transform: scale(0.97) translateY(5px);
-    z-index: 1;
-  }
-  .slide-enter.slide-enter-active {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-    transition: opacity 3000ms linear 1000ms,
-      transform 3000ms ease-in-out 1000ms;
-  } */
-
-  /* slide exit */
-  /* .slide-exit {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-  .slide-exit.slide-exit-active {
-    opacity: 0;
-    transform: scale(0.97) translateY(5px);
-    transition: opacity 1500ms linear, transform 1500ms ease-out;
-  }
-  .slide-exit-done {
-    opacity: 0;
-  } */
 `;
 
 const HeroSlide = styled.div`
@@ -176,9 +81,6 @@ const HeroContent = styled.div`
     margin-bottom: 0.8rem;
   }
 `;
-// const Arrow = styled(IoMdArrowRoundForward)`
-//     margin-left: 0.5rem;
-// `;
 
 const Header = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -232,10 +134,6 @@ const Header = ({ slides }) => {
             </HeroSlide>
           );
         })}
-        {/* <SliderButtons>
-                    <PrevArrow onClick={prevSlide}/>
-                    <NextArrow onClick={nextSlide}/>
-                </SliderButtons> */}
       </HeroWrapper>
     </HeroSection>
   );
