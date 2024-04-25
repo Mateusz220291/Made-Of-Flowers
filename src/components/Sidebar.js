@@ -130,11 +130,7 @@ const Sidebar = ({ isOpen, toggle }) => {
                 className: "global-class-name",
               }}
             >
-              <Social
-                href="https://www.facebook.com/Z-kwiat%C3%B3w-uszyte-134634411672850"
-                target="_blank"
-                aria-label="Facebook"
-              >
+              <Social href="#" target="_blank" aria-label="Facebook">
                 <FaFacebook />
               </Social>
             </IconContext.Provider>
@@ -144,11 +140,7 @@ const Sidebar = ({ isOpen, toggle }) => {
                 className: "global-class-name",
               }}
             >
-              <Social
-                href="https://www.instagram.com/zkwiatowuszyte/?fbclid=IwAR2etgOeP7mR198DTvux45JoKKoVQlqxUggSJ593z1LyLNbVj5voWr6Xzg8"
-                target="_blank"
-                aria-label="Instagram"
-              >
+              <Social href="#" target="_blank" aria-label="Instagram">
                 <FaInstagram />
               </Social>
             </IconContext.Provider>

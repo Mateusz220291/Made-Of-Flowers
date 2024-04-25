@@ -222,8 +222,8 @@ function Footer() {
               Kontaktować można się również bezpośrednio na adres e-mail badź
               telefon:
             </ContactSubtitle>
-            <ContactText>zkwiatowuszyte@gmail.com</ContactText>
-            <ContactText>+48 508 278 306</ContactText>
+            <ContactText>gmail@gmail.com</ContactText>
+            <ContactText>+48 000 000 000</ContactText>
           </ContactWrapper>
 
           <Form action="https://formspree.io/f/mrgrqpqa" method="POST">
@@ -261,11 +261,7 @@ function Footer() {
                   className: "global-class-name",
                 }}
               >
-                <Social
-                  href="https://www.facebook.com/Z-kwiat%C3%B3w-uszyte-134634411672850"
-                  target="_blank"
-                  aria-label="Facebook"
-                >
+                <Social href="#" target="_blank" aria-label="Facebook">
                   <FaFacebook />
                 </Social>
               </IconContext.Provider>
@@ -275,11 +271,7 @@ function Footer() {
                   className: "global-class-name",
                 }}
               >
-                <Social
-                  href="https://www.instagram.com/zkwiatowuszyte/?fbclid=IwAR2etgOeP7mR198DTvux45JoKKoVQlqxUggSJ593z1LyLNbVj5voWr6Xzg8"
-                  target="_blank"
-                  aria-label="Instagram"
-                >
+                <Social href="#" target="_blank" aria-label="Instagram">
                   <FaInstagram />
                 </Social>
               </IconContext.Provider>
@@ -288,7 +280,7 @@ function Footer() {
             <Designer to="/" onClick={toggleHome}>
               {" "}
               <p>Projekt strony: </p>
-              <a href="http://www.softwarematt.pl/" target="_blank">
+              <a href="#" target="_blank">
                 <img src={DesignerImg} alt="SoftwareMatt"></img>
               </a>
             </Designer>
